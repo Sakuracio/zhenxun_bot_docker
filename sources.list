@@ -1,0 +1,11 @@
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirror.xtom.com.hk/debian/ bullseye main contrib non-free
+# deb-src https://mirror.xtom.com.hk/debian/ bullseye main contrib non-free
+deb https://mirror.xtom.com.hk/debian/ bullseye-updates main contrib non-free
+# deb-src https://mirror.xtom.com.hk/debian/ bullseye-updates main contrib non-free
+
+deb https://mirror.xtom.com.hk/debian/ bullseye-backports main contrib non-free
+# deb-src https://mirror.xtom.com.hk/debian/ bullseye-backports main contrib non-free
+
+deb https://mirror.xtom.com.hk/debian/ bullseye-security main contrib non-free
+# deb-src https://mirror.xtom.com.hk/debian/ bullseye-security main contrib non-free
