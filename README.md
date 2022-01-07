@@ -1,7 +1,9 @@
 # zxenv
 
 #### 介绍
-尝试使用docker快速部署zhenxun_bot的一个方案
+尝试使用docker快速部署zhenxun_bot的一个方案  
+脚本部署的zhenxun_bot可能不是最新版  
+如要更新可以自行替换文件嗷
 
 ##### 使用方法
 请提前下载好docker 国内服务器请设置好容器加速镜像   
