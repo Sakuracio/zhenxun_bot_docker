@@ -2,7 +2,7 @@
 
 #### 介绍
 尝试使用docker快速部署zhenxun_bot的一个方案  
-脚本部署的zhenxun_bot可能不是最新版
+脚本部署的zhenxun_bot可能不是最新版  
 如要更新可以自行替换文件嗷
 
 ##### 使用方法
