@@ -1,3 +1,5 @@
 *.md linguist-language=Python
 *.py linguist-language=Python
+*.env linguist-language=Python
 *.yml linguist-language=Python
+*.yaml linguist-language=Python
