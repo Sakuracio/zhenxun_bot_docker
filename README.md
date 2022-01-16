@@ -2,20 +2,18 @@
 
 #### 介绍
 尝试使用docker快速部署zhenxun_bot的一个方案  
-脚本部署的gocq/zhenxun_bot可能不是最新版  
-如要更新可以自行替换文件嗷
 
 ##### 使用方法
 请提前下载好docker 国内服务器请设置好容器加速镜像   
 ```shell
-wget https://gitee.com/Sakuracio/zxenv/raw/dev/zxenv_install.sh -O /home/zxenv_install.sh && cd /home && bash zxenv_install.sh
+# 请自行使用docker volume或映射目录做好数据持久化运行
+# 拉取镜像
 
-#也可以将shell脚本下载下来然后运行
-wget https://gitee.com/Sakuracio/zxenv/raw/dev/zxenv_install.sh
-bash zxenv_install.sh
+docker pull hibikier/zhenxun_bot:版本号
+
+# 不清楚版本号请到Docker Hub查看
 ```
-更新文件只需要更新宿主机里的/home/zxenv
 
 #### FINGERPOST
-[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)  
+[Docker Hub](https://hub.docker.com/r/hibikier/zhenxun_bot)  
 [zhenxun_bot](https://github.com/HibiKier/zhenxun_bot)
