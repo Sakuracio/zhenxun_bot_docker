@@ -21,11 +21,11 @@ docker run -d --name zhenxun_bot \
 # 加速镜像 香港节点(无法拉取时请使用官方镜像)
 docker volume create zhenxun_bot
 
-docker pull registry.cn-hongkong.aliyuncs.com/sakuracio/zhenxun_bot:latest
+docker pull cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:latest
 
 docker run -d --name zhenxun_bot \
     -v zhenxun_bot:/bot \
-    registry.cn-hongkong.aliyuncs.com/sakuracio/zhenxun_bot:latest
+    cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:latest
 	
 ```
 
