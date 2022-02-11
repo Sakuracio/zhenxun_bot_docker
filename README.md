@@ -21,12 +21,12 @@ docker run -d --name zhenxun_bot \
 # 国内加速镜像 (无法正常拉取时请使用官方镜像)
 docker volume create zhenxun_bot
 
-docker pull cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:[版本号:底部查看制品仓库]
+docker pull cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:[版本号]
 
 docker run -d --name zhenxun_bot \
     -v zhenxun_bot:/bot \
-    cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:[版本号:底部查看制品仓库]
-	
+    cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:[版本号]
+# 版本号对应真寻Bot版本也可到底部制品仓库查看
 ```
 
 #### FINGERPOST
