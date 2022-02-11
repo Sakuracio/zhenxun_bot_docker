@@ -30,5 +30,5 @@ docker run -d --name zhenxun_bot \
 ```
 
 #### FINGERPOST
-[zhenxun_bot](https://github.com/HibiKier/zhenxun_bot)
-[制品仓库](https://cloudbase-100005283109.coding.net/public-artifacts/Sakuracio/zhenxun_bot/packages)
+[zhenxun_bot](https://github.com/HibiKier/zhenxun_bot)  
+[制品仓库](https://cloudbase-100005283109.coding.net/public-artifacts/Sakuracio/zhenxun_bot/packages)  
