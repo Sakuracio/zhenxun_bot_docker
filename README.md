@@ -15,7 +15,7 @@ docker run \
 	-v /home/zhenxun_bot:/bot \
 	-e SU='管理员企鹅号' \ #(可选)
 	-e DB='数据库连接链接地址' \ #(可选)
-	sakuracio/zhenxun_bot:latest
+	hibikier/zhenxun_bot:latest
 
 # 确保映射的目录 /home/zhenxun_bot 为空 可自行设置
 # 如果官方镜像拉取速度缓慢可以尝试使用加速镜像
