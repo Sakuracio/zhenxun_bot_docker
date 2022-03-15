@@ -12,7 +12,7 @@
 docker run \
 	--name zhenxun_bot \
 	--network=host \
-    -v /home/zhenxun_bot:/bot \
+	-v /home/zhenxun_bot:/bot \
 	-e SU='管理员企鹅号' \ #(可选)
 	-e DB='数据库连接链接地址' \ #(可选)
     sakuracio/zhenxun_bot:latest
