@@ -6,27 +6,24 @@
 ##### 使用方法
 请提前下载好 docker
 ```shell
-# 自行映射配置文件或 Bot 本体 或使用 docker volume
 # 请使用 docker volume 或映射目录做好数据持久化运行
 # 官方镜像↓ 建议配合 postgres docker 使用
-docker volume create zhenxun_bot
 
-docker pull hibikier/zhenxun_bot:latest
+docker run \
+	--name zhenxun_bot \
+	--network=host \
+    -v /home/zhenxun_bot:/bot \
+	-e SU='管理员企鹅号' \ #(可选)
+	-e DB='数据库连接链接地址' \ #(可选)
+    sakuracio/zhenxun_bot:latest
 
-docker run -d --name zhenxun_bot \
-    -v zhenxun_bot:/bot \
-    hibikier/zhenxun_bot:latest
-
+# 确保映射的目录 /home/zhenxun_bot 为空 可自行设置
 # 如果官方镜像拉取速度缓慢可以尝试使用加速镜像
 
 # 国内加速镜像 (无法正常拉取时请使用官方镜像)
-docker volume create zhenxun_bot
 
 docker pull cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:[版本号]
 
-docker run -d --name zhenxun_bot \
-    -v zhenxun_bot:/bot \
-    cloudbase-100005283109-docker.pkg.coding.net/sakuracio/zhenxun_bot/zhenxun_bot:[版本号]
 # 版本号对应真寻 Bot 版本也可到底部制品仓库查看
 ```
 
