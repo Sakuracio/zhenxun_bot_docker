@@ -14,7 +14,7 @@ docker run \
 	--network=host \
 	-v /home/zhenxun_bot:/bot \
 	-e SU='管理员企鹅号' \ #(可选)
-	-e DB='数据库连接链接地址' \ #(可选)
+	-e DB='数据库链接地址' \ #(可选)
 	hibikier/zhenxun_bot:latest
 
 # 确保映射的目录 /home/zhenxun_bot 为空 可自行设置
