@@ -15,7 +15,7 @@ docker run \
 	hibikier/zhenxun_bot:latest
 
 # 确保映射的目录 /home/zhenxun_bot 为空 可自行设置
-
+# 如果你使用 MacOSX 或其他不支持 host 模式的环境 请使用-p参数映射端口
 ```
 
 #### FINGERPOST
