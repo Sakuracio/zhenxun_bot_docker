@@ -1,7 +1,6 @@
 # 使用 docker 部署 zhenxun_bot
 
 ## 使用方法
-请提前下载好 docker
 ```shell
 # 请使用 docker volume 或映射目录做好数据持久化运行
 # 官方镜像↓ 建议配合 postgres docker 使用
