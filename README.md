@@ -19,7 +19,7 @@ docker run \
 	hibikier/zhenxun_bot:latest
 
 # 确保映射的目录 /home/zhenxun_bot 为空 可自行设置
-# 如果你使用 MacOSX 或其他不支持 host 模式的环境 请使用-p参数映射端口
+# 如果你使用 Mac OSX 或其他不支持 host 模式的环境 请使用-p 参数映射端口
 # DB 示例 postgresql://user:password@127.0.0.1:5432/database
 ```
 ### 如果你在 ARM 平台运行请查看
