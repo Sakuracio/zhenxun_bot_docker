@@ -1,5 +1,10 @@
 # 使用 docker 部署 zhenxun_bot
 
+![](https://img.shields.io/badge/Python%E7%89%88%E6%9C%AC-3.9-ff69b4?style=for-the-badge)
+![](https://img.shields.io/docker/image-size/hibikier/zhenxun_bot?label=%E9%95%9C%E5%83%8F%E5%A4%A7%E5%B0%8F&style=for-the-badge)
+![](https://img.shields.io/docker/pulls/hibikier/zhenxun_bot?label=%E4%B8%8B%E8%BD%BD%E6%AC%A1%E6%95%B0&style=for-the-badge)
+![](https://img.shields.io/badge/%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0-amd64-8B008B?style=for-the-badge)
+
 ## 使用方法
 ```shell
 # 请使用 docker volume 或映射目录做好数据持久化运行
@@ -17,8 +22,10 @@ docker run \
 # 如果你使用 MacOSX 或其他不支持 host 模式的环境 请使用-p参数映射端口
 ```
 ### 如果你在 ARM 平台运行请查看
-Github: [SinKy-Yan/zhenxunbot-docker](https://github.com/SinKy-Yan/zhenxunbot-docker)  
-docker hub: [jyishit/zhenxun_bot](https://hub.docker.com/r/jyishit/zhenxun_bot/)
+[![Github](https://shields.io/badge/GITHUB-SinKy--Yan-4476AF?logo=github&style=for-the-badge)](https://github.com/SinKy-Yan/zhenxunbot-docker)
+[![DOCKER](https://shields.io/badge/docker-jyishit/zhenxun_bot-4476AF?logo=docker&style=for-the-badge)](https://hub.docker.com/r/jyishit/zhenxun_bot/)
+
+如果你的机器 RAM < 1G  可能无法正常启动
 
 #### FINGERPOST
-[zhenxun_bot](https://github.com/HibiKier/zhenxun_bot)  
+[![Github](https://shields.io/badge/GITHUB-HibiKier/zhenxun_bot-4476AF?logo=github&style=for-the-badge)](https://github.com/HibiKier/zhenxun_bot)
