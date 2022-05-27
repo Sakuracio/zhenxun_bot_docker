@@ -20,12 +20,13 @@ docker run \
 
 # 确保映射的目录 /home/zhenxun_bot 为空 可自行设置
 # 如果你使用 MacOSX 或其他不支持 host 模式的环境 请使用-p参数映射端口
+# DB 示例 postgresql://user:password@127.0.0.1:5432/database
 ```
 ### 如果你在 ARM 平台运行请查看
 [![Github](https://shields.io/badge/GITHUB-SinKy--Yan-4476AF?logo=github&style=for-the-badge)](https://github.com/SinKy-Yan/zhenxunbot-docker)
 [![DOCKER](https://shields.io/badge/docker-jyishit/zhenxun_bot-4476AF?logo=docker&style=for-the-badge)](https://hub.docker.com/r/jyishit/zhenxun_bot/)
 
-如果你的机器 RAM < 1G  可能无法正常启动
+**如果你的机器 RAM < 1G  可能无法正常启动**
 
-#### FINGERPOST
+#### 指路
 [![Github](https://shields.io/badge/GITHUB-HibiKier/zhenxun_bot-4476AF?logo=github&style=for-the-badge)](https://github.com/HibiKier/zhenxun_bot)
