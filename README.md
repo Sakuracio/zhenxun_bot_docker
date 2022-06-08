@@ -1,8 +1,8 @@
 # 使用 docker 部署 zhenxun_bot
 
 ![](https://img.shields.io/badge/Python%E7%89%88%E6%9C%AC-3.9-ff69b4?style=for-the-badge)
-![](https://img.shields.io/docker/image-size/hibikier/zhenxun_bot?label=%E9%95%9C%E5%83%8F%E5%A4%A7%E5%B0%8F&style=for-the-badge)
-![](https://img.shields.io/docker/pulls/hibikier/zhenxun_bot?label=%E4%B8%8B%E8%BD%BD%E6%AC%A1%E6%95%B0&style=for-the-badge)
+![](https://img.shields.io/docker/image-size/hibikier/zhenxun_bot?label=%E9%95%9C%E5%83%8F%E5%A4%A7%E5%B0%8F&logo=docker&style=for-the-badge)
+![](https://img.shields.io/docker/pulls/hibikier/zhenxun_bot?label=%E4%B8%8B%E8%BD%BD%E6%AC%A1%E6%95%B0&logo=docker&style=for-the-badge)
 ![](https://img.shields.io/badge/%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0-amd64-8B008B?style=for-the-badge)
 
 ## 使用方法
