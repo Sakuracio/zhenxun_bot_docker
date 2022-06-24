@@ -1,0 +1,61 @@
+# 构建docker镜像
+name: Docker Image CI
+
+# 触发条件
+on:
+  push:
+    tags:       # tag更新时触发此workflow
+      - '*'
+        
+#工作流程
+jobs:
+
+  build:
+    # 运行环境
+    runs-on: ubuntu-latest
+    # 运行步骤
+    steps:
+    
+    # 检出（仓库）文件 / 获取代码
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: |
+        sudo timedatectl set-timezone "Asia/Shanghai"
+        sudo apt-get update
+        sudo apt-get install --no-install-recommends git wget ca-certificates
+        sudo git clone https://github.com/HibiKier/zhenxun_bot.git $(pwd)/botfile
+        sudo rm -rf $(pwd)/botfile/.git
+        sudo tar -zcf bot.tar.gz -C botfile .
+        sudo rm -rf botfile
+        sudo chmod 755 zx-cli
+        sudo ls -la --color
+    
+    # 登录 docker Hub
+    - name: Login Docker Hub
+      uses: docker/login-action@v2.0.0
+      with:
+        username: ${{secrets.DOCKERHUB_USERNAME}}
+        password: ${{secrets.DOCKERHUB_TOKEN}}
+    
+    # 镜像元数据操作
+    - name: Docker Metadata action
+      id: meta
+      uses: docker/metadata-action@v4.0.1
+      with:
+        labels: |
+          MAINTAINER=Hibikier
+          org.opencontainers.image.title=zhenxun_bot
+          org.opencontainers.image.description=基于 Nonebot2 和 go-cqhttp 开发，以 postgresql 作为数据库，非常可爱的绪山真寻bot。
+          org.opencontainers.image.url=https://github.com/Sakuracio/zhenxun_bot_docker
+          org.opencontainers.image.source=https://github.com/HibiKier/zhenxun_bot
+        images: |
+          hibikier/zhenxun_bot
+    
+    # 构建 并 推送镜像
+    - name: build and push docker image
+      uses: docker/build-push-action@v3.0.0
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
