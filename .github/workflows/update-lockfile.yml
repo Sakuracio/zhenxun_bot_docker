@@ -1,0 +1,51 @@
+# 这是一个手动触发的基本工作流
+
+name: Update Lock File
+
+# 控制操作何时运行 工作流在使用UI手动触发时运行
+# 也可以使用API
+on:
+  workflow_dispatch:
+    # 工作流接受的输入.
+    inputs:
+      name:
+        # 在UI中显示友好的描述 而不是 “name”
+        description: 'Run now?'
+        # 如果没有明确提供值 则使用以下默认值
+        default: 'Yes'
+        # 是否必须提供输入
+        required: false
+
+# 工作流运行由一个或多个可以顺序或并行运行的作业组成
+jobs:
+  # 此工作流包含一个名为 “updatex” 的作业
+  updatex:
+    # 作业将在其上运行的运行程序类型
+    runs-on: ubuntu-latest
+
+    # 步骤表示将作为作业一部分执行的任务序列
+    steps:
+    # 检出（仓库）文件 / 获取代码
+    - uses: actions/checkout@v3
+      with: 
+        persist-credentials: false
+        fetch-depth: 0
+    - name: Update Poetry Lock File
+      run: |
+        sudo timedatectl set-timezone "Asia/Shanghai"
+        sudo apt-get update
+        sudo apt-get install --no-install-recommends wget ca-certificates
+        sudo wget https://raw.githubusercontent.com/HibiKier/zhenxun_bot/main/pyproject.toml
+        sudo sed -i '8,11d' pyproject.toml
+        sudo pip3 install poetry
+        sudo poetry --version
+        sudo rm requirements.txt
+        sudo poetry export --output requirements.txt --without-hashes
+        sudo rm pyproject.toml poetry.lock
+        sudo ls -la --color
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+        
