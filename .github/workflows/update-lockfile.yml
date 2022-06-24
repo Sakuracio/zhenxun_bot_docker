@@ -7,14 +7,14 @@ name: Update Lock File
 on:
   workflow_dispatch:
     # 工作流接受的输入.
-    inputs:
-      name:
+    #inputs:
+    #  name:
         # 在UI中显示友好的描述 而不是 “name”
-        description: 'Run now?'
+    #    description: 'Run now?'
         # 如果没有明确提供值 则使用以下默认值
-        default: 'Yes'
+    #    default: 'Yes'
         # 是否必须提供输入
-        required: false
+    #    required: false
 
 # 工作流运行由一个或多个可以顺序或并行运行的作业组成
 jobs:
