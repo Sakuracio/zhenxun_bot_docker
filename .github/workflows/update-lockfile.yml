@@ -42,7 +42,7 @@ jobs:
         echo "Start install Poetry"
         sudo pip3 install pipx
         sudo pipx install poetry
-        sudo pipx - poetry ensurepath
+        sudo pipx ensurepath
         echo "Show Poetry Version"
         sudo poetry --version
         sudo rm requirements.txt
