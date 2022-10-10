@@ -38,13 +38,14 @@ jobs:
         sudo wget https://raw.githubusercontent.com/HibiKier/zhenxun_bot/main/pyproject.toml
         sudo sed -i '8,11d' pyproject.toml
         python3 -V
+        pip3 -V
         echo "Start install Poetry"
         curl -sSL https://install.python-poetry.org | python3 -
         echo "Show Poetry Version"
-        sudo python3 -m poetry --version
+        sudo poetry --version
         sudo rm requirements.txt
         echo "Export Requirements File"
-        sudo python3 -m poetry export -f requirements.txt --output requirements.txt --without-hashes
+        sudo poetry export -f requirements.txt --output requirements.txt --without-hashes
         sudo rm pyproject.toml poetry.lock
         sudo ls -la --color
     - name: Commit & Push changes
