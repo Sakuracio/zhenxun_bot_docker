@@ -40,9 +40,9 @@ jobs:
         python3 -V
         pip3 -V
         echo "Start install Poetry"
-        pip3 install poetry
+        sudo pip3 install poetry
         echo "Show Poetry Version"
-        poetry --version
+        sudo poetry --version
         sudo rm requirements.txt
         echo "Export Requirements File"
         poetry export -f requirements.txt --output requirements.txt --without-hashes
