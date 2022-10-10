@@ -40,15 +40,12 @@ jobs:
         python3 -V
         pip3 -V
         echo "Start install Poetry"
-        curl -sSL https://install.python-poetry.org | python3 -
-        python3 -m venv /home/runner/.local/bin
-        /home/runner/.local/bin/pip install -U pip setuptools
-        /home/runner/.local/bin/pip install poetry
+        pip3 install poetry
         echo "Show Poetry Version"
-        sudo poetry --version
+        poetry --version
         sudo rm requirements.txt
         echo "Export Requirements File"
-        sudo poetry export -f requirements.txt --output requirements.txt --without-hashes
+        poetry export -f requirements.txt --output requirements.txt --without-hashes
         sudo rm pyproject.toml poetry.lock
         sudo ls -la --color
     - name: Commit & Push changes
