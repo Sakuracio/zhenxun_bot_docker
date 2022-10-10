@@ -39,7 +39,7 @@ jobs:
         sudo sed -i '8,11d' pyproject.toml
         python3 -V
         echo "Start install Poetry"
-        sudo pip3 install poetry
+        curl -sSL https://install.python-poetry.org | python3 -
         echo "Show Poetry Version"
         sudo poetry --version
         sudo rm requirements.txt
