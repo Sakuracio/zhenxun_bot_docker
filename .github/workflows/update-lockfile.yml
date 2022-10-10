@@ -37,6 +37,7 @@ jobs:
         sudo apt-get install --no-install-recommends wget ca-certificates
         sudo wget https://raw.githubusercontent.com/HibiKier/zhenxun_bot/main/pyproject.toml
         sudo sed -i '8,11d' pyproject.toml
+        python3 -V
         echo "Start install Poetry"
         sudo pip3 install poetry
         echo "Show Poetry Version"
