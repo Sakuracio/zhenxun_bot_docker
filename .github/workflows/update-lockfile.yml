@@ -40,7 +40,7 @@ jobs:
         sudo pip3 install poetry
         sudo poetry --version
         sudo rm requirements.txt
-        sudo poetry export --output requirements.txt --without-hashes
+        sudo poetry export -f requirements.txt --output requirements.txt --without-hashes
         sudo rm pyproject.toml poetry.lock
         sudo ls -la --color
     - name: Commit & Push changes
