@@ -37,9 +37,12 @@ jobs:
         sudo apt-get install --no-install-recommends wget ca-certificates
         sudo wget https://raw.githubusercontent.com/HibiKier/zhenxun_bot/main/pyproject.toml
         sudo sed -i '8,11d' pyproject.toml
+        echo "Start install Poetry"
         sudo pip3 install poetry
+        echo "Show Poetry Version"
         sudo poetry --version
         sudo rm requirements.txt
+        echo "Export Requirements File"
         sudo poetry export -f requirements.txt --output requirements.txt --without-hashes
         sudo rm pyproject.toml poetry.lock
         sudo ls -la --color
