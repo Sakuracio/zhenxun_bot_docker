@@ -40,7 +40,8 @@ jobs:
         python3 -V
         pip3 -V
         echo "Start install Poetry"
-        sudo pip3 install poetry
+        sudo pip3 install pipx
+        sudo pipx install poetry
         echo "Show Poetry Version"
         sudo poetry --version
         sudo rm requirements.txt
