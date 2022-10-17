@@ -5,6 +5,12 @@
 ![](https://img.shields.io/docker/pulls/hibikier/zhenxun_bot?label=%E4%B8%8B%E8%BD%BD%E6%AC%A1%E6%95%B0&logo=docker&style=for-the-badge)
 ![](https://img.shields.io/badge/%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0-amd64-8B008B?style=for-the-badge)
 
+## 拉取镜像
+```shell
+docker pull hibikier/zhenxun_bot
+# 如果你要使用指定版本请到 Docker hub 查看 tags
+```
+
 ## 使用方法
 ```shell
 # 请使用 docker volume 或映射目录做好数据持久化运行
