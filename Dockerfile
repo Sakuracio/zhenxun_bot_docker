@@ -24,6 +24,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 	libgtk-3-0 \
 	libasound2 \
 	&& pip install -r requirements.txt --no-cache-dir \
-	&& playwright install
+	&& playwright install \
+	&& apt-get clean
 
 CMD ["./zx-cli","-mode","docker"]
